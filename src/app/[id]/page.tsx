@@ -1,6 +1,6 @@
 export const runtime = "edge";
 
-export default async function ShareText({ params }: { params: { id: string } }) {
+export default async function ShareText({ params }: { params: Promise<any> }) {
     const { id } = await params
 
     return (
