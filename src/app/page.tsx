@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { createSharedText } from '../actions/text-share';
 
-export default function Home() {
+export default async function Home() {
   const [text, setText] = useState('');
   // const setData = { text }
-
+  const result = await createSharedText()
+  console.log(result)
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
       <h1 className="text-4xl font-bold mb-6 text-blue-600">TextShare</h1>
